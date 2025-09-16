@@ -1,0 +1,44 @@
+name: Sandbox Automation Web
+
+on:
+  workflow_dispatch: 
+  schedule: 
+    - cron: '00 11,20 * * 1-5'
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Install all dependencies
+        run: |
+          npm install
+      - name: Cypress run with Cucumber
+        uses: cypress-io/github-action@v5
+        with:
+          command: npm run cypress:execution
+      - name: Send Discord Notification
+        if: ${{ always() }}
+        run: |
+          node discordNotifier.js
+      - name: Generate Report HTML
+        if: ${{ always() }}
+        run: |
+          node cucumber-html-report.js
+      - name: Upload Tests Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: ./cypress/reports/cucumber-html-report
+          if-no-files-found: ignore
+          retention-days: 2
+      - name: Download Tests Results
+        if: always()
+        uses: actions/download-artifact@v1
+        with:
+          name: results
+

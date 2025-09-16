@@ -1,0 +1,23 @@
+name: Execução dos testes regressivos
+
+on:
+  workflow_dispatch: 
+  # schedule: 
+  #   - cron: '00 11,20 * * 1-5'
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Install all dependencies
+        run: |
+          npm install
+      - name: Cypress run All tests
+        uses: cypress-io/github-action@v5
+        with:
+          command: npm run cypress:execution
+    

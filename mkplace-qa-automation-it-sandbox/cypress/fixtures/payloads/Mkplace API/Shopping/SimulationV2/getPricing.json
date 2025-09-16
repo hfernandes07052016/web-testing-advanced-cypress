@@ -1,0 +1,38 @@
+{
+    "step": "checkout",
+    "skus": [
+        {
+            "skuId": "MKU-0bRw64giDwfZ5",
+            "quantity": 1
+        }
+    ],
+    "customer": {
+        "name": "Teste teste",
+        "email": "teste@mkplace.com.br",
+        "document": "43633488871",
+        "phone": {
+            "areaCode": 11,
+            "number": 999999999
+        }
+    },
+    "address": {
+        "isPrimary": true,
+        "number": "2",
+        "zipcode": "06243-100",
+        "countryCode": "BR",
+        "_id": "lIUfsJPxIf",
+        "ref": "N9-56V2Nmf",
+        "receiverName": "David Silva",
+        "street": "avenida de teste",
+        "city": "cidade de teste",
+        "shortState": "SP",
+        "state": "sp",
+        "complement": "Perto da casa",
+        "neighborhood": "Bairro",
+        "__v": 0,
+        "createdAt": "2024-05-22T19:41:08.390Z",
+        "updatedAt": "2024-05-22T19:41:08.390Z",
+        "verifyToken": "612380b5fad1cf813a64f8b7cac54562",
+        "zipCode": "06243-100"
+    }
+}

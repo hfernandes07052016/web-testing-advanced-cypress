@@ -1,0 +1,39 @@
+{
+    "deliveryAddress": {
+        "receiverName": "John Brown",
+        "street": "Kevin Brook",
+        "city": "Imogeneborough",
+        "complement": "Apt. 672",
+        "shortState": "AP",
+        "state": "California",
+        "number": "282",
+        "zipcode": "06243-100",
+        "countryCode": "NL",
+        "neighborhood": "Larkin Fork"
+    },
+    "shoppingCart": [
+        {
+            "productName": "Adaptador USB-C para USB 3.0 10cm HP",
+            "productSlug": "adaptador-usb-c-para-usb-30-10cm-hp",
+            "slug": "adaptador-usb-c-para-usb-30-10cm-hp",
+            "skuId": "MKU-0bRw64giDwfZ5",
+            "name": "Adaptador USB-C para USB 3.0 10cm HP",
+            "thumbnail": {
+                "sort": 0,
+                "ext": "png",
+                "path": "https://a-static.mlcdn.com.br/1000x1000/adaptador-usb-c-para-usb-3-0-10cm-hp/magazineluiza/227424000/4c6f5ce847489e1a70133c8364c017b0.jpg"
+            },
+            "verifyToken": "eyJhbGciOiJIUzI1NiJ9.eyJza3VJZCI6Ik1LVS0yTEs0NlhFY2FSTVdIIiwiZGltZW5zaW9ucyI6e319.MPiY9KquJ6W5IRI0L6HQbHfxc0xpvgBmdFY1kCARHBo",
+            "categories": [
+                "Informática",
+                "Informática",
+                "Adaptadores"
+            ],
+            "metadata": {}
+        }
+    ],
+    "tokens": {
+        "customer": "2ae69f4c10029655cdffb9a3fb9ffd52",
+        "simulation": "2924cb67ceb70db87077ad3a6e4fbde8"
+    }
+}

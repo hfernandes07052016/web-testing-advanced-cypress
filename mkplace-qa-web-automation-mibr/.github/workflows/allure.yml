@@ -1,0 +1,24 @@
+name: Allure Integration
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install all dependencies
+        run: |
+          npm install
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run with Cucumber
+        uses: cypress-io/github-action@v5
+        with:
+          command: npm run cypress:execution-allure
+      - name: Send Discord Notification
+        if: ${{ always() }}
+        run: |
+          node discordNotifier.js

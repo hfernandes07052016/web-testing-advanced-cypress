@@ -1,0 +1,40 @@
+{
+  "name": "cypress-intermediario-v2",
+  "version": "1.0.0",
+  "description": "Repositório do projeto v2 do curso de testes automatizados com Cypress (intermdiário) da Escola TAT no Udemy",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open:sandbox": "cypress open --env sandbox=1",
+    "cy:run:sandbox": "cypress run --env sandbox=1",
+    "cypress:execution": "cypress run --spec cypress/e2e/api/*",
+    "cy:open:dev": "cypress open",
+    "cy:run:dev": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlsf82/cypress-intermediario-v2.git"
+  },
+  "keywords": [
+    "Cypress intermediário",
+    "Talking About Testing",
+    "E2E Testing"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wlsf82/cypress-intermediario-v2/issues"
+  },
+  "homepage": "https://github.com/wlsf82/cypress-intermediario-v2#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.17.3",
+    "cypress-plugin-api": "^2.11.1",
+    "mongodb": "^5.7.0"
+  },
+  "dependencies": {
+    "cypress-localstorage-commands": "^2.2.3",
+    "dotenv": "^16.4.5",
+    "minimatch": "^9.0.2"
+  }
+}
